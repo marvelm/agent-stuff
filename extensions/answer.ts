@@ -67,7 +67,7 @@ Example output:
   ]
 }`;
 
-const DEFAULT_EXTRACTION_MODELS = ["openai-codex/gpt-5.3", "anthropic/claude-haiku-4-5"];
+const DEFAULT_EXTRACTION_MODELS = ["openai-codex/gpt-5.4-mini", "anthropic/claude-haiku-4-5"];
 const ANSWER_MODELS_ENV = "MITSUPI_ANSWER_MODELS";
 
 type ResolvedAuth = { ok: true; apiKey?: string; headers?: Record<string, string> } | { ok: false; error: string };
