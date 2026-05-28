@@ -516,7 +516,7 @@ export default function (pi: ExtensionAPI) {
 
 			// Run extraction with loader UI
 			const extractionResult = await ctx.ui.custom<ExtractionResult | null>((tui, theme, _kb, done) => {
-				const loader = new BorderedLoader(tui, theme, `Extracting questions using ${extractionModel.id}...`);
+				const loader = new BorderedLoader(tui, theme, `Extracting questions using ${extractionModel.id}...`, { cancellable: false });
 				loader.onAbort = () => done(null);
 
 				const doExtract = async () => {
